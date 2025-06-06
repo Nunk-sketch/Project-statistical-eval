@@ -18,7 +18,7 @@ def bootstrap_mean(data, num_samples=1000):
 #95% confidence interval for the mean
 # conf_int = np.percentile(bootstrap_means,[2.5, 97.5])
 
-def plot_bootstrap_distribution(bootstrap_means, conf_int):
+def plot_bootstrap_distribution(bootstrap_means, conf_int, data):
     plt.figure(figsize=(10, 6))
     plt.hist(bootstrap_means, bins=30, edgecolor='black', alpha=0.7, density=True)
     plt.axvline(np.mean(data), color="red", linestyle="dashed", linewidth=2, label="Sample Mean")
@@ -36,7 +36,7 @@ def plot_bootstrap_distribution(bootstrap_means, conf_int):
     plt.show()
 
 # Vi fanger 'n' (frekvenser) og 'bins' (bin-kanter) fra hist-funktionen
-def plot_bootstrap_distribution_scaled(bootstrap_means, conf_int):
+def plot_bootstrap_distribution_scaled(bootstrap_means, conf_int, data):
     n, bins, patches = plt.hist(bootstrap_means, bins=30, edgecolor='black', alpha=0.7)
 
     plt.axvline(np.mean(data), color="red", linestyle="dashed", linewidth=2, label="Sample Mean")
