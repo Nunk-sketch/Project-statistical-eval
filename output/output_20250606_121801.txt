@@ -1,0 +1,3 @@
+Prompt: Explain how AI works in a few words
+
+Answer: AI learns patterns from data to make predictions or decisions.
